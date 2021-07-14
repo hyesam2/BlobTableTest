@@ -55,7 +55,7 @@ namespace Hyein.Function
                    foreach(MemoData entity in segment)
                    {
                        JObject srcObj = JObject.FromObject(entity);
-                     //  srcObj.Remove("Timestamp");
+                      srcObj.Remove("Timestamp");
                        resultArr.Add(srcObj);
                    }
 
