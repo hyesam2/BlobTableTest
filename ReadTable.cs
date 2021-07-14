@@ -44,7 +44,7 @@ namespace Hyein.Function
            );
            //데이터 양 많을 때 가져오지 못하면 안 되기 때문에 만들어 주는 것
             TableContinuationToken tokenA  = null;
-            rangeQ.TakeCount = 10000;
+            rangeQ.TakeCount = 1000;
             JArray resultArr = new JArray();
             try
             {
@@ -55,7 +55,7 @@ namespace Hyein.Function
                    foreach(MemoData entity in segment)
                    {
                        JObject srcObj = JObject.FromObject(entity);
-                       srcObj.Remove("Timestamp");
+                     //  srcObj.Remove("Timestamp");
                        resultArr.Add(srcObj);
                    }
 
