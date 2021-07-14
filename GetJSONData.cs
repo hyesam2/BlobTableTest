@@ -21,7 +21,7 @@ namespace Hyein.Function
         string requestBody = new StreamReader(req.Body).ReadToEnd();
         dynamic data = JsonConvert.DeserializeObject(requestBody);
         string valueA = data.a;
-            return requestBody;
+            return valueA;
         }
     }
 }
