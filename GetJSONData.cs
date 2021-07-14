@@ -20,7 +20,7 @@ namespace Hyein.Function
         string connStrA = Environment.GetEnvironmentVariable("AzureWebJobsStorage");
         string requestBody = new StreamReader(req.Body).ReadToEnd();
         dynamic data = JsonConvert.DeserializeObject(requestBody);
-        string valueA = data.a;
+        string valueA = data.filename;
 
         BlobServiceClient clientA = new BlobServiceClient(connStrA);
         BlobContainerClient containerA = clientA.GetBlobContainerClient("hyeincon");
